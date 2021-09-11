@@ -1,0 +1,195 @@
+<! DOCTYPE html>
+<html Lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodal Savvy Speech Sense (N3S) </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <style>
+            .rectangle {
+              height: 340px;
+              width: 1200px;
+              background-color:cyan;
+            }
+    </style>
+    <style>
+            .square {
+              height: 45px;
+              width: 100px;
+              background-color:white;
+            }
+    </style>
+
+
+     <!-- Style CSS -->
+   
+    <style>
+        body{
+              background-image: url("");
+              
+            }
+    </style>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="mobile-nav">
+            <a  class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+    </div>
+
+    <br>
+
+    <h1 class="text-center mt-5">
+            <h1><strong><p style="color:blue">Tattaunawa Speech Recognition System </p></strong></h1>  
+    </h1>
+
+    <div class="row">
+            <div class="column">
+              <img src="img/Nigeria_chidren.jpg" alt="Forest" style="width:150%">
+            </div>
+            <div class="column">
+                <img src="img/ChatBot.gif" alt="Snow" style="width:50%">
+            </div>
+       
+    </div>
+
+           
+    
+
+ 
+    <div class="container">
+        
+     
+ 
+            <div class="form-group">
+              <!--  <textarea name="" id="" cols="30" rows="10"></textarea>-->
+                <textarea  id="textbox"  cols="130" rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <button id="start-btn" class="btn btn-outline-primary btn-lg">
+               <!-- <button id="start-btn" class="btn btn-danger btn-block"> -->
+                   <strong>Start</strong> 
+                </button>
+                <!--<button id="upload" type="button" class="btn btn-outline-primary btn-lg">Upload Photo</button>-->
+					
+
+                
+                    
+            </div>
+
+            <div id="google_translate_element"></div>
+           
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+            
+
+            <h1 class="text-center mt-5">
+                    <p><strong><p style="color:blue">Tattaunawa Language Translator</p></strong></p>  
+            </h1>
+
+            <table border="0" cellpadding="0" cellspacing="0" style="color:blue">
+                    <tr>
+                        <td style="color:blue">
+                                <div class="square" style="color:blue" >
+                                        <strong>Source Language</strong> 
+                                    </div>  
+                           
+                        </td>
+                        <td style="color:blue">
+                            <select id="ddlSource" style="color:blue">
+                                <option value="en" selected = "selected">English</option>
+                                <option value="ha">Hausa</option>
+                                <option value="ig">Igbo</option>
+                                <option value="yr">Yoruba</option>
+                            </select>
+                        </td>
+                        <td>
+                        </td>
+                        <td style="color:blue">
+                            <strong>Nigeria Native Language</strong>
+                        </td>
+                        <td>
+                            <select id="ddlTarget" style="color:blue">
+                                <option value="en">English</option>
+                                <option value="ha" selected = "selected">Hausa </option>
+                                <option value="ig">Igbo</option>
+                                <option value="yo">Yoruba</option>    
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" id="btnTranslate" value="Translate" class="btn btn-outline-primary btn-lg"  >
+                                   <strong>Translate</strong> 
+                                         </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea id="txtSource" rows="10" cols="60"></textarea>
+                        </td>
+                        <td>
+                        </td>
+                        <td colspan="2">
+                            <textarea id="txtTarget" rows="10" cols="60"></textarea>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+                 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                <script type="text/javascript">
+                    $("#btnTranslate").click(function () {
+                        https://www.programmableweb.com/api/google-cloud-translation-rest-api-v30
+                        var url = "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBjR9OKWKD5_Yl-jiqf5-vGlpUII-JOFVw";
+                        url += "&source=" + $("#ddlSource").val();
+                        url += "&target=" + $("#ddlTarget").val();
+                        url += "&q=" + escape($("#txtSource").val());
+                        $.get(url, function (data, status) {
+                            $("#txtTarget").val(data.data.translations[0].translatedText);
+                        });
+                    });
+                </script>
+
+                <br>
+
+                <br>
+
+                <div class="row">
+                    <div class="column">
+                        <img src="img/vulnerable-children.jpg" alt="Forest" style="width:40%">
+                        <img src="img/vulnerable-children.jpg" alt="Forest" style="width:40%">
+                      </div>
+                    
+               </div>
+               <br>
+
+                <h1><p style="color:blue"> Features of the  Tattaunawa System  </p></h1> 
+
+                <br>
+<div class="rectangle" style="color:blue" >
+    <br>
+<ol>
+ <li><h4 style="color:blue"> The Tattaunawa (speech recognition) system translates English voice speech to text: reduces the time spent when taking  dictation.        
+           </h4> </li>
+           <br>
+  <li><h4 style="color:blue"> The Tattaunawa language translator allows translation of English to Nigerian native  languages and vice-versa
+  </h4> </li>
+  <br>           
+  <li><h4 style="color:blue"> The Tattaunawa language translator helps children  to easily learn  the three main Nigerian native languages  </h4> 
+  <br></li>  
+
+   <li><h4 style="color:blue"> The Tattaunawa language translator improves and exposes  a  child  or an adult to new vocabulary  </h4> </li> 
+
+</ol>
+</div>            
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/config.js"></script>
+
+
+</html>

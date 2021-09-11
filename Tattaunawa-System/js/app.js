@@ -1,0 +1,1 @@
+var textInp = document.querySelector("textarea");
